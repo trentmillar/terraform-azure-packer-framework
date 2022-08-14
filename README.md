@@ -20,5 +20,7 @@ This project does three things,
 
 4) Capture the `client_id`, `client_secret`, `tenant_id`, and `subscription_id` from the prior steps. Go to the TFC workspace and in the Variables tab, add these variables with the correct values. You will also need one more variable.
 
+5) Make sure the TFC Workspace is mapped to this repo. Just follow the steps at Variables > Version Control
+
 (optional), if you just want to deploy quickly you can delete `backend.tf` and run your `terraform init` & `terraform apply` locally. Just make sure you set or pass the values of the variables defined in `variables.tf`
 
