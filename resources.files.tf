@@ -42,7 +42,7 @@ locals {
 }
 
 resource "azurerm_storage_account" "files" {
-  name                     = format("stgpackerfiles%s", var.environment)
+  name                     = format("storagegpackerfiles%s", var.environment)
   resource_group_name      = azurerm_resource_group.files.name
   location                 = azurerm_resource_group.files.location
   account_tier             = "Standard"
