@@ -1,0 +1,17 @@
+---
+name: packer - validate template syntax
+on: push
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    container:
+      image: hashicorp/packer:full
+    steps:
+      - uses: actions/checkout@v2
+      - name: 💪 Validate Template
+        run: |
+          echo "packer --version $(packer --version)"
+          cd templates
+          find . -name "*.json" -type f -maxdepth 1 -exec packer validate -syntax-only {} \;
+          
